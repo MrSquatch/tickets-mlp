@@ -1,0 +1,301 @@
+Pabellon,Laboratorio,Categoria,Subcategoria,Afectados,Criticidad
+Nuevo Pabellon,2,Software,No abre,2-5 PCs,Baja
+Nuevo Pabellon,8,PC Estudiante,Falla pantalla,Mas de 5 PCs,Media
+Nuevo Pabellon,1,Proyector,Sin imagen,No aplica,Alta
+Nuevo Pabellon,5,Software,No abre,1 PC,Baja
+Nuevo Pabellon,5,PC Estudiante,Falla pantalla,Mas de 5 PCs,Media
+Antiguo Pabellon,8,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Nuevo Pabellon,2,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Nuevo Pabellon,7,PC Estudiante,No enciende,1 PC,Baja
+Antiguo Pabellon,7,PC Docente,Muy lenta,No aplica,Media
+Nuevo Pabellon,3,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,5,Software,No abre,1 PC,Baja
+Nuevo Pabellon,2,Proyector,Sin imagen,No aplica,Alta
+Nuevo Pabellon,4,Software,Presenta errores,1 PC,Baja
+Nuevo Pabellon,7,Electricidad,Sin energia,2-5 PCs,Media
+Nuevo Pabellon,7,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,5,PC Estudiante,No enciende,Todo el laboratorio,Alta
+Nuevo Pabellon,3,PC Estudiante,No enciende,2-5 PCs,Media
+Nuevo Pabellon,4,Proyector,No enciende,No aplica,Alta
+Antiguo Pabellon,1,PC Docente,Pantalla negra,No aplica,Alta
+Nuevo Pabellon,2,Software,No instalado,Mas de 5 PCs,Media
+Nuevo Pabellon,6,Proyector,Imagen borrosa,No aplica,Media
+Antiguo Pabellon,8,PC Docente,No enciende,No aplica,Alta
+Nuevo Pabellon,8,Red,Sin Internet,1 PC,Baja
+Antiguo Pabellon,3,Red,Sin Internet,Todo el laboratorio,Alta
+Antiguo Pabellon,2,PC Docente,No enciende,No aplica,Alta
+Nuevo Pabellon,6,Software,No abre,2-5 PCs,Baja
+Antiguo Pabellon,8,Software,Presenta errores,1 PC,Baja
+Nuevo Pabellon,2,PC Estudiante,No enciende,1 PC,Baja
+Nuevo Pabellon,2,PC Estudiante,Falla/Falta periferico,1 PC,Baja
+Nuevo Pabellon,1,Red,Sin Internet,1 PC,Baja
+Antiguo Pabellon,8,PC Estudiante,Falla pantalla,1 PC,Baja
+Antiguo Pabellon,8,PC Docente,Pantalla negra,No aplica,Alta
+Nuevo Pabellon,6,PC Estudiante,Falla/Falta periferico,Mas de 5 PCs,Media
+Nuevo Pabellon,4,PC Docente,Pantalla negra,No aplica,Alta
+Nuevo Pabellon,7,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Antiguo Pabellon,4,Software,No abre,Mas de 5 PCs,Media
+Antiguo Pabellon,5,Proyector,Imagen borrosa,No aplica,Media
+Antiguo Pabellon,6,Electricidad,Tomacorriente defectuoso,2-5 PCs,Media
+Nuevo Pabellon,2,Software,No instalado,Todo el laboratorio,Alta
+Antiguo Pabellon,1,PC Docente,Pantalla negra,No aplica,Alta
+Nuevo Pabellon,3,PC Docente,Pantalla negra,No aplica,Alta
+Nuevo Pabellon,7,PC Docente,Sin audio,No aplica,Media
+Antiguo Pabellon,5,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Antiguo Pabellon,6,PC Estudiante,Falla/Falta periferico,Mas de 5 PCs,Media
+Antiguo Pabellon,2,PC Docente,No enciende,No aplica,Alta
+Antiguo Pabellon,4,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,5,Red,Sin Internet,1 PC,Baja
+Nuevo Pabellon,6,Proyector,Sin imagen,No aplica,Alta
+Nuevo Pabellon,5,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,5,Software,No abre,2-5 PCs,Baja
+Antiguo Pabellon,3,Software,No abre,Todo el laboratorio,Alta
+Antiguo Pabellon,7,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Antiguo Pabellon,5,Software,Presenta errores,1 PC,Baja
+Nuevo Pabellon,7,Electricidad,Tomacorriente defectuoso,Mas de 5 PCs,Media
+Antiguo Pabellon,7,Software,Presenta errores,2-5 PCs,Baja
+Nuevo Pabellon,3,Software,Presenta errores,2-5 PCs,Media
+Nuevo Pabellon,6,PC Estudiante,Falla pantalla,Mas de 5 PCs,Media
+Antiguo Pabellon,8,PC Estudiante,Falla/Falta periferico,Mas de 5 PCs,Media
+Nuevo Pabellon,4,PC Docente,Pantalla negra,No aplica,Alta
+Nuevo Pabellon,3,Software,No instalado,Todo el laboratorio,Alta
+Nuevo Pabellon,3,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,1,Software,No instalado,1 PC,Baja
+Antiguo Pabellon,8,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Antiguo Pabellon,5,Software,No abre,1 PC,Baja
+Antiguo Pabellon,2,Electricidad,Tomacorriente defectuoso,1 PC,Baja
+Antiguo Pabellon,4,PC Docente,Sin audio,No aplica,Media
+Nuevo Pabellon,3,Software,No instalado,1 PC,Baja
+Nuevo Pabellon,6,Red,Sin Internet,1 PC,Baja
+Antiguo Pabellon,8,Software,No abre,2-5 PCs,Baja
+Nuevo Pabellon,3,PC Docente,Muy lenta,No aplica,Media
+Nuevo Pabellon,2,Proyector,Imagen borrosa,No aplica,Media
+Antiguo Pabellon,7,PC Docente,Sin audio,No aplica,Media
+Antiguo Pabellon,1,PC Docente,Muy lenta,No aplica,Media
+Antiguo Pabellon,6,PC Estudiante,No enciende,Todo el laboratorio,Alta
+Antiguo Pabellon,5,Software,No instalado,2-5 PCs,Media
+Antiguo Pabellon,1,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,5,PC Estudiante,Falla pantalla,Mas de 5 PCs,Media
+Nuevo Pabellon,6,PC Estudiante,No enciende,1 PC,Baja
+Nuevo Pabellon,4,Electricidad,Tomacorriente defectuoso,2-5 PCs,Media
+Antiguo Pabellon,5,PC Docente,Pantalla negra,No aplica,Alta
+Antiguo Pabellon,8,Electricidad,Tomacorriente defectuoso,2-5 PCs,Media
+Antiguo Pabellon,5,Electricidad,Tomacorriente defectuoso,2-5 PCs,Media
+Antiguo Pabellon,6,PC Docente,Sin Internet,No aplica,Alta
+Antiguo Pabellon,7,PC Estudiante,No enciende,1 PC,Baja
+Nuevo Pabellon,6,Software,Presenta errores,2-5 PCs,Baja
+Nuevo Pabellon,3,Software,No instalado,Mas de 5 PCs,Media
+Antiguo Pabellon,7,PC Estudiante,Falla/Falta periferico,1 PC,Baja
+Antiguo Pabellon,4,Software,No abre,Todo el laboratorio,Alta
+Nuevo Pabellon,6,PC Docente,Muy lenta,No aplica,Media
+Antiguo Pabellon,6,PC Docente,No enciende,No aplica,Alta
+Antiguo Pabellon,1,Proyector,Sin imagen,No aplica,Alta
+Antiguo Pabellon,7,Red,Sin Internet,Mas de 5 PCs,Alta
+Antiguo Pabellon,6,Software,No abre,2-5 PCs,Baja
+Nuevo Pabellon,3,PC Docente,No enciende,No aplica,Alta
+Nuevo Pabellon,4,PC Estudiante,Falla/Falta periferico,Todo el laboratorio,Alta
+Antiguo Pabellon,5,Proyector,No enciende,No aplica,Alta
+Antiguo Pabellon,1,PC Estudiante,Falla/Falta periferico,Todo el laboratorio,Alta
+Antiguo Pabellon,5,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,2,Software,No abre,1 PC,Baja
+Nuevo Pabellon,7,Software,No abre,1 PC,Baja
+Antiguo Pabellon,4,PC Docente,Sin Internet,No aplica,Alta
+Antiguo Pabellon,4,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Nuevo Pabellon,4,PC Estudiante,Falla pantalla,Mas de 5 PCs,Media
+Antiguo Pabellon,5,Software,No instalado,2-5 PCs,Media
+Nuevo Pabellon,6,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,1,PC Docente,Sin audio,No aplica,Media
+Antiguo Pabellon,8,PC Docente,Pantalla negra,No aplica,Alta
+Nuevo Pabellon,6,PC Estudiante,Falla pantalla,1 PC,Baja
+Antiguo Pabellon,7,PC Estudiante,Falla pantalla,1 PC,Baja
+Antiguo Pabellon,5,PC Estudiante,No enciende,1 PC,Baja
+Nuevo Pabellon,8,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,2,Software,No abre,2-5 PCs,Media
+Antiguo Pabellon,8,Software,No abre,1 PC,Baja
+Antiguo Pabellon,1,Proyector,No enciende,No aplica,Alta
+Nuevo Pabellon,6,PC Estudiante,No enciende,1 PC,Baja
+Nuevo Pabellon,4,Software,No abre,1 PC,Baja
+Antiguo Pabellon,5,PC Estudiante,No enciende,1 PC,Baja
+Antiguo Pabellon,3,PC Estudiante,Falla/Falta periferico,1 PC,Baja
+Nuevo Pabellon,7,Red,Internet lento,2-5 PCs,Media
+Nuevo Pabellon,3,PC Docente,Muy lenta,No aplica,Media
+Antiguo Pabellon,4,Proyector,Sin imagen,No aplica,Alta
+Antiguo Pabellon,7,Proyector,Sin imagen,No aplica,Alta
+Nuevo Pabellon,1,Proyector,No enciende,No aplica,Alta
+Antiguo Pabellon,6,Proyector,No enciende,No aplica,Alta
+Antiguo Pabellon,2,PC Docente,Sin Internet,No aplica,Alta
+Antiguo Pabellon,1,Electricidad,Sin energia,2-5 PCs,Media
+Antiguo Pabellon,7,Electricidad,Tomacorriente defectuoso,2-5 PCs,Media
+Nuevo Pabellon,4,Software,No abre,Mas de 5 PCs,Media
+Antiguo Pabellon,3,PC Estudiante,Falla pantalla,1 PC,Baja
+Antiguo Pabellon,2,PC Estudiante,Falla/Falta periferico,Mas de 5 PCs,Media
+Nuevo Pabellon,8,PC Estudiante,Falla/Falta periferico,1 PC,Baja
+Nuevo Pabellon,7,Red,Sin Internet,Mas de 5 PCs,Alta
+Nuevo Pabellon,2,PC Docente,Sin Internet,No aplica,Alta
+Antiguo Pabellon,5,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,5,Proyector,No enciende,No aplica,Alta
+Antiguo Pabellon,2,Electricidad,Sin energia,2-5 PCs,Media
+Nuevo Pabellon,5,PC Estudiante,Falla pantalla,1 PC,Baja
+Antiguo Pabellon,5,Proyector,Sin imagen,No aplica,Alta
+Nuevo Pabellon,3,PC Docente,Pantalla negra,No aplica,Alta
+Antiguo Pabellon,5,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,1,PC Estudiante,Falla/Falta periferico,1 PC,Baja
+Nuevo Pabellon,6,Proyector,Imagen borrosa,No aplica,Media
+Antiguo Pabellon,4,PC Docente,Sin Internet,No aplica,Alta
+Antiguo Pabellon,3,PC Estudiante,Falla pantalla,Mas de 5 PCs,Media
+Nuevo Pabellon,8,Electricidad,Sin energia,1 PC,Baja
+Antiguo Pabellon,4,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,1,Software,No instalado,2-5 PCs,Media
+Nuevo Pabellon,7,Proyector,No enciende,No aplica,Alta
+Nuevo Pabellon,2,PC Docente,Pantalla negra,No aplica,Alta
+Antiguo Pabellon,2,PC Docente,Pantalla negra,No aplica,Alta
+Antiguo Pabellon,7,Red,Sin Internet,Mas de 5 PCs,Alta
+Nuevo Pabellon,4,Red,Sin Internet,Mas de 5 PCs,Alta
+Antiguo Pabellon,5,Proyector,Imagen borrosa,No aplica,Media
+Antiguo Pabellon,4,Electricidad,Tomacorriente defectuoso,1 PC,Baja
+Antiguo Pabellon,5,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,8,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,5,Electricidad,Sin energia,1 PC,Baja
+Antiguo Pabellon,5,Software,No abre,Todo el laboratorio,Alta
+Antiguo Pabellon,8,PC Estudiante,Falla/Falta periferico,1 PC,Baja
+Antiguo Pabellon,3,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,2,Proyector,Sin imagen,No aplica,Alta
+Antiguo Pabellon,5,Software,No abre,Todo el laboratorio,Alta
+Nuevo Pabellon,2,PC Estudiante,Falla/Falta periferico,1 PC,Baja
+Nuevo Pabellon,5,Proyector,Imagen borrosa,No aplica,Media
+Antiguo Pabellon,4,Software,No instalado,Mas de 5 PCs,Media
+Antiguo Pabellon,3,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,3,Software,No abre,2-5 PCs,Media
+Nuevo Pabellon,7,PC Docente,Muy lenta,No aplica,Media
+Antiguo Pabellon,4,Proyector,Imagen borrosa,No aplica,Media
+Antiguo Pabellon,5,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,8,Software,No abre,1 PC,Baja
+Antiguo Pabellon,4,PC Docente,No enciende,No aplica,Alta
+Nuevo Pabellon,5,PC Docente,Pantalla negra,No aplica,Alta
+Antiguo Pabellon,2,PC Estudiante,Falla/Falta periferico,Mas de 5 PCs,Media
+Nuevo Pabellon,7,PC Estudiante,No enciende,2-5 PCs,Media
+Nuevo Pabellon,6,PC Estudiante,Falla pantalla,Mas de 5 PCs,Media
+Nuevo Pabellon,1,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Antiguo Pabellon,7,PC Estudiante,Falla pantalla,1 PC,Baja
+Antiguo Pabellon,3,Electricidad,Tomacorriente defectuoso,Mas de 5 PCs,Media
+Antiguo Pabellon,3,Red,Internet lento,Todo el laboratorio,Alta
+Antiguo Pabellon,5,Proyector,Imagen borrosa,No aplica,Media
+Antiguo Pabellon,7,Electricidad,Sin energia,Mas de 5 PCs,Media
+Antiguo Pabellon,8,PC Docente,Sin audio,No aplica,Media
+Nuevo Pabellon,6,PC Estudiante,Falla pantalla,Mas de 5 PCs,Media
+Nuevo Pabellon,5,Software,No abre,Mas de 5 PCs,Media
+Antiguo Pabellon,7,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Nuevo Pabellon,5,Red,Sin Internet,1 PC,Baja
+Antiguo Pabellon,2,Proyector,No enciende,No aplica,Alta
+Antiguo Pabellon,2,Red,Sin Internet,Todo el laboratorio,Alta
+Antiguo Pabellon,2,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Nuevo Pabellon,1,PC Docente,Pantalla negra,No aplica,Alta
+Antiguo Pabellon,6,PC Docente,No enciende,No aplica,Alta
+Nuevo Pabellon,1,Proyector,Imagen borrosa,No aplica,Media
+Antiguo Pabellon,5,Software,Presenta errores,2-5 PCs,Media
+Antiguo Pabellon,8,PC Estudiante,Falla/Falta periferico,2-5 PCs,Baja
+Nuevo Pabellon,2,Red,Sin Internet,Todo el laboratorio,Alta
+Nuevo Pabellon,1,PC Estudiante,No enciende,1 PC,Baja
+Nuevo Pabellon,6,Proyector,Sin imagen,No aplica,Alta
+Nuevo Pabellon,7,Electricidad,Sin energia,1 PC,Baja
+Antiguo Pabellon,2,PC Docente,Muy lenta,No aplica,Media
+Antiguo Pabellon,2,Electricidad,Tomacorriente defectuoso,2-5 PCs,Media
+Antiguo Pabellon,3,PC Docente,Sin Internet,No aplica,Alta
+Antiguo Pabellon,3,PC Docente,Muy lenta,No aplica,Media
+Nuevo Pabellon,1,PC Docente,Muy lenta,No aplica,Media
+Nuevo Pabellon,7,PC Estudiante,Falla pantalla,Mas de 5 PCs,Media
+Antiguo Pabellon,7,Red,Internet lento,Todo el laboratorio,Alta
+Antiguo Pabellon,1,Software,No instalado,Mas de 5 PCs,Media
+Antiguo Pabellon,3,Proyector,Sin imagen,No aplica,Alta
+Antiguo Pabellon,7,Software,No abre,2-5 PCs,Media
+Nuevo Pabellon,8,Proyector,Sin imagen,No aplica,Alta
+Antiguo Pabellon,3,Software,No abre,Mas de 5 PCs,Media
+Antiguo Pabellon,4,Software,No abre,2-5 PCs,Baja
+Nuevo Pabellon,1,PC Docente,Pantalla negra,No aplica,Alta
+Nuevo Pabellon,7,Software,No abre,2-5 PCs,Media
+Nuevo Pabellon,6,PC Docente,Sin Internet,No aplica,Alta
+Antiguo Pabellon,3,PC Estudiante,No enciende,1 PC,Baja
+Antiguo Pabellon,5,PC Docente,No enciende,No aplica,Alta
+Antiguo Pabellon,2,PC Docente,No enciende,No aplica,Alta
+Nuevo Pabellon,6,PC Estudiante,Falla pantalla,Mas de 5 PCs,Media
+Antiguo Pabellon,4,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,2,Electricidad,Sin energia,1 PC,Baja
+Nuevo Pabellon,8,Software,No abre,Mas de 5 PCs,Media
+Antiguo Pabellon,4,Software,No abre,2-5 PCs,Baja
+Nuevo Pabellon,8,PC Estudiante,Falla/Falta periferico,1 PC,Baja
+Nuevo Pabellon,6,Electricidad,Sin energia,1 PC,Baja
+Nuevo Pabellon,5,PC Estudiante,Falla/Falta periferico,1 PC,Baja
+Nuevo Pabellon,8,PC Docente,No enciende,No aplica,Alta
+Nuevo Pabellon,6,PC Estudiante,No enciende,2-5 PCs,Media
+Antiguo Pabellon,7,PC Docente,Sin Internet,No aplica,Alta
+Antiguo Pabellon,3,PC Docente,Muy lenta,No aplica,Media
+Antiguo Pabellon,8,PC Estudiante,No enciende,1 PC,Baja
+Antiguo Pabellon,4,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,5,PC Estudiante,No enciende,1 PC,Baja
+Antiguo Pabellon,8,Software,Presenta errores,2-5 PCs,Baja
+Nuevo Pabellon,7,PC Estudiante,Falla/Falta periferico,Todo el laboratorio,Alta
+Antiguo Pabellon,6,PC Docente,No enciende,No aplica,Alta
+Antiguo Pabellon,2,Software,Presenta errores,2-5 PCs,Media
+Nuevo Pabellon,7,Software,No abre,1 PC,Baja
+Antiguo Pabellon,5,PC Estudiante,No enciende,1 PC,Baja
+Antiguo Pabellon,2,Electricidad,Tomacorriente defectuoso,1 PC,Baja
+Nuevo Pabellon,1,Software,No instalado,Mas de 5 PCs,Media
+Antiguo Pabellon,6,Software,No instalado,2-5 PCs,Media
+Antiguo Pabellon,6,Software,No abre,Mas de 5 PCs,Media
+Antiguo Pabellon,5,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,4,Red,Sin Internet,Mas de 5 PCs,Alta
+Antiguo Pabellon,5,Software,No instalado,Mas de 5 PCs,Media
+Nuevo Pabellon,3,PC Docente,Sin Internet,No aplica,Alta
+Antiguo Pabellon,3,Red,Sin Internet,Mas de 5 PCs,Alta
+Antiguo Pabellon,3,PC Estudiante,No enciende,1 PC,Baja
+Nuevo Pabellon,6,PC Docente,Sin audio,No aplica,Media
+Antiguo Pabellon,8,PC Docente,Pantalla negra,No aplica,Alta
+Nuevo Pabellon,8,Software,No abre,1 PC,Baja
+Nuevo Pabellon,3,Proyector,No enciende,No aplica,Alta
+Nuevo Pabellon,8,Software,Presenta errores,1 PC,Baja
+Nuevo Pabellon,8,Software,No abre,Mas de 5 PCs,Media
+Antiguo Pabellon,2,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,5,Red,Sin Internet,1 PC,Baja
+Antiguo Pabellon,5,PC Estudiante,Falla/Falta periferico,Mas de 5 PCs,Media
+Antiguo Pabellon,1,PC Docente,No enciende,No aplica,Alta
+Antiguo Pabellon,8,Red,Internet lento,2-5 PCs,Media
+Nuevo Pabellon,8,PC Estudiante,No enciende,1 PC,Baja
+Nuevo Pabellon,1,PC Estudiante,Falla/Falta periferico,Mas de 5 PCs,Media
+Nuevo Pabellon,1,Software,No abre,2-5 PCs,Baja
+Nuevo Pabellon,6,PC Docente,Sin audio,No aplica,Media
+Nuevo Pabellon,1,Red,Internet lento,Todo el laboratorio,Alta
+Nuevo Pabellon,2,Software,No instalado,1 PC,Baja
+Antiguo Pabellon,8,Software,Presenta errores,2-5 PCs,Media
+Antiguo Pabellon,5,PC Estudiante,No enciende,1 PC,Baja
+Antiguo Pabellon,5,Proyector,Sin imagen,No aplica,Alta
+Antiguo Pabellon,2,Proyector,Sin imagen,No aplica,Alta
+Nuevo Pabellon,2,PC Estudiante,Falla/Falta periferico,Mas de 5 PCs,Media
+Nuevo Pabellon,3,PC Docente,No enciende,No aplica,Alta
+Antiguo Pabellon,7,Software,Presenta errores,2-5 PCs,Baja
+Nuevo Pabellon,7,PC Docente,Sin audio,No aplica,Media
+Antiguo Pabellon,3,Proyector,No enciende,No aplica,Alta
+Nuevo Pabellon,8,PC Docente,Pantalla negra,No aplica,Alta
+Antiguo Pabellon,3,Red,Internet lento,Todo el laboratorio,Alta
+Nuevo Pabellon,3,PC Estudiante,No enciende,2-5 PCs,Media
+Antiguo Pabellon,5,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,6,PC Docente,Muy lenta,No aplica,Media
+Antiguo Pabellon,1,Electricidad,Sin energia,2-5 PCs,Media
+Antiguo Pabellon,5,Electricidad,Tomacorriente defectuoso,Mas de 5 PCs,Media
+Nuevo Pabellon,6,PC Docente,Sin audio,No aplica,Media
+Nuevo Pabellon,1,PC Estudiante,No enciende,1 PC,Baja
+Nuevo Pabellon,7,PC Docente,No enciende,No aplica,Alta
+Antiguo Pabellon,4,PC Docente,No enciende,No aplica,Alta
+Antiguo Pabellon,7,PC Estudiante,No enciende,2-5 PCs,Media
+Nuevo Pabellon,8,Software,No abre,1 PC,Baja
+Nuevo Pabellon,1,Red,Internet lento,Todo el laboratorio,Alta
+Nuevo Pabellon,3,PC Estudiante,Falla/Falta periferico,1 PC,Baja
+Nuevo Pabellon,4,Software,No abre,Mas de 5 PCs,Media
+Antiguo Pabellon,2,Red,Internet lento,2-5 PCs,Media
+Nuevo Pabellon,6,Red,Internet lento,2-5 PCs,Media
+Antiguo Pabellon,7,Red,Internet lento,2-5 PCs,Media
+Antiguo Pabellon,6,PC Docente,Sin Internet,No aplica,Alta
+Nuevo Pabellon,8,PC Estudiante,Falla pantalla,1 PC,Baja
+Nuevo Pabellon,3,PC Docente,Sin audio,No aplica,Media
+Antiguo Pabellon,7,Software,No instalado,Mas de 5 PCs,Media
+Antiguo Pabellon,3,Electricidad,Tomacorriente defectuoso,2-5 PCs,Media
+Nuevo Pabellon,8,PC Estudiante,No enciende,1 PC,Baja
