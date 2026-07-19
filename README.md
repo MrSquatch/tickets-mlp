@@ -53,24 +53,52 @@ activar el entorno antes de correr cualquier script:
 source .venv/bin/activate
 ```
 
-## 🔗 n8n (formulario y automatización)
+## 🏗️ Infraestructura del proyecto
+
+El sistema está dividido en dos componentes principales:
+
+1. 🔗 **Servidor de automatización (n8n)**: aloja el formulario utilizado por
+   los docentes y ejecuta los flujos de automatización.
+2. 🖥️ **Servidor principal del proyecto**: contiene el entorno de
+   entrenamiento, la API del modelo y la base de datos de tickets.
+
+### 🔗 Servidor de automatización (n8n)
 
 El formulario que reciben los docentes, junto con la lógica de envío del
 ticket a la API y el envío de notificaciones por correo, está montado en
 n8n, en un servidor separado del resto del proyecto:
 
-```
+```text
 http://192.168.30.25:5678/
 ```
 
-## 🖥️ Servidor del proyecto (entrenamiento + API)
+### 🖥️ Servidor principal del proyecto
 
 El resto del proyecto (Jupyter para entrenamiento, la API y el visor de
 base de datos) corre en un servidor distinto, dentro de la red de la
 facultad:
 
-```
+```text
 192.168.30.40
 ```
 
 Ver el README de cada carpeta para las URLs específicas de cada servicio.
+
+### 🛠️ Flujo de trabajo recomendado
+
+Como todo el proyecto está montado en el servidor principal
+(`192.168.30.40`), el flujo normal de trabajo requiere **4 terminales
+(PowerShell o CMD) conectadas por SSH** en simultáneo:
+
+1. 📓 **Terminal 1** — Jupyter: `model-training/start_jupyter.sh`
+2. 🚀 **Terminal 2** — Backend de la API: `model-api/start_backend.sh`
+3. 🗄️ **Terminal 3** — Visor de base de datos: `model-api/start_dbviewer.sh`
+4. 🔧 **Terminal 4** — una sesión SSH libre para revisar logs, hacer
+   commits, navegar por los archivos o ejecutar tareas adicionales sin
+   interrumpir los servicios anteriores.
+
+Para conectarte por SSH desde cualquiera de estas terminales:
+
+```bash
+ssh root@192.168.30.40
+```
