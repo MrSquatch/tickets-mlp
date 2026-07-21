@@ -1,81 +1,977 @@
 {
-  "name": "Workflow Tickets MLP",
+  "name": "Tickets MLP",
   "nodes": [
     {
       "parameters": {
-        "httpMethod": "POST",
-        "path": "webhook-api-v1",
+        "fromEmail": "ticketsmlp123@gmail.com",
+        "toEmail": "gabriel.barrantesc@unmsm.edu.pe",
+        "subject": "test",
+        "emailFormat": "text",
+        "text": "=Se ha registrado un nuevo ticket de criticidad ALTA.\nPor favor, atenderlo lo antes posible.\n\n----------------------------------------\nDETALLE DEL TICKET\n----------------------------------------\nPabellón:      {{ $('Recolector').item.json.Pabellon }}\nLaboratorio:   {{ $('Recolector').item.json.Laboratorio }}\nCategoría:     {{ $('Recolector').item.json.Categoria }}\nSubcategoría:  {{ $('Recolector').item.json.Subcategoria }}\nAfectados:     {{ $('Recolector').item.json.Afectados }}\n\nComentario del docente:\n{{ $('Recolector').item.json.Comentario || 'Sin comentarios adicionales' }}\n----------------------------------------",
         "options": {}
       },
-      "id": "e4f82a10-1111-4234-a800-000000000001",
-      "name": "Recepcion de Eventos API",
-      "type": "n8n-nodes-base.webhook",
-      "typeVersion": 1,
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
       "position": [
-        240,
-        300
+        2576,
+        -64
       ],
-      "webhookId": "9a8b7c6d-5555-4321-8888-000000000001"
+      "id": "3e1b19ec-0acb-41fb-80d1-207df6e57c7f",
+      "name": "Send an Email",
+      "webhookId": "b4342e87-4455-46ac-b7b3-a3585bb94ce2",
+      "credentials": {
+        "smtp": {
+          "id": "6bHtcfRJ1GS2GpPS",
+          "name": "SMTP account"
+        }
+      }
     },
     {
       "parameters": {
-        "jsCode": "// Normalización de payload de entrada\nconst inputData = $input.all();\nconst processedData = inputData.map(item => ({\n  id: item.json.body.id || null,\n  timestamp: new Date().toISOString(),\n  status: \"PROCESSED\",\n  payload: item.json.body\n}));\n\nreturn processedData;"
+        "formTitle": "Tickets FISI",
+        "formDescription": "Bienvenido al Formulario de Recepción de Tickets de la FISI!\n\nPrimero indíquenos dónde se encuentra:",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Pabellon",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Antiguo Pabellon"
+                  },
+                  {
+                    "option": "Nuevo Pabellon"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Laboratorio",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "1"
+                  },
+                  {
+                    "option": "2"
+                  },
+                  {
+                    "option": "3"
+                  },
+                  {
+                    "option": "4"
+                  },
+                  {
+                    "option": "5"
+                  },
+                  {
+                    "option": "6"
+                  },
+                  {
+                    "option": "7"
+                  },
+                  {
+                    "option": "8"
+                  }
+                ]
+              },
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
       },
-      "id": "b3c2d1a0-2222-4567-b999-000000000002",
-      "name": "Normalizar Payload",
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.5,
       "position": [
-        460,
-        300
-      ]
+        -96,
+        -48
+      ],
+      "id": "ea952166-8483-49e7-8e1d-3a5468c22e29",
+      "name": "On form submission",
+      "webhookId": "48041936-7a4c-4311-a521-ebb8a90085d2"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Registro de Ticket terminado",
+        "completionMessage": "Muchas gracias por usar nuestro sistema de tickets!\n\nEn la brevedad posible se atenderá su caso. Si tiene otra duda o incidencia, no dude en usar de nuevo el servicio.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        1776,
+        -48
+      ],
+      "id": "88b217fe-311d-405b-ae67-3a1a49c41c98",
+      "name": "Despedida",
+      "webhookId": "437823e3-5c98-446b-9cf2-c6bddada5f63"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Cuál es el problema?",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Tomacorrientes defectuoso"
+                  },
+                  {
+                    "option": "Sin energia"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Cantidad de equipos afectados",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "1 PC"
+                  },
+                  {
+                    "option": "2-5 PCs"
+                  },
+                  {
+                    "option": "Mas de 5 PCs"
+                  },
+                  {
+                    "option": "Todo el laboratorio"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Algo más que nos quieras comentar del problema?",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "options": {
+          "formTitle": "Problemas con la Electricidad"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        784,
+        656
+      ],
+      "id": "1e794a70-69f8-4565-ab6d-4817b2fa476a",
+      "name": "Electricidad",
+      "webhookId": "c161f7ad-3e51-43ad-8439-c8f4cf474471"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Cuál es el problema?",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "No abre"
+                  },
+                  {
+                    "option": "Presenta errores"
+                  },
+                  {
+                    "option": "No instalado"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Cantidad de equipos afectados",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "1 PC"
+                  },
+                  {
+                    "option": "2-5 PCs"
+                  },
+                  {
+                    "option": "Mas de 5 PCs"
+                  },
+                  {
+                    "option": "Todo el laboratorio"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Algo más que nos quieras comentar del problema?",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "options": {
+          "formTitle": "Problemas con el uso de un Software"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        784,
+        448
+      ],
+      "id": "620a0393-bbda-4364-9d1a-5824be01a0eb",
+      "name": "Software",
+      "webhookId": "c161f7ad-3e51-43ad-8439-c8f4cf474471"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Cuál es el problema?",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "No enciende"
+                  },
+                  {
+                    "option": "Falla/falta periferico"
+                  },
+                  {
+                    "option": "Falla pantalla"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Cantidad de equipos afectados",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "1 PC"
+                  },
+                  {
+                    "option": "2-5 PCs"
+                  },
+                  {
+                    "option": "Mas de 5 PCs"
+                  },
+                  {
+                    "option": "Todo el laboratorio"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Algo más que nos quieras comentar del problema?",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "options": {
+          "formTitle": "Problemas con la PC del Estudiante"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        784,
+        240
+      ],
+      "id": "c3aba28f-28d4-452f-a43f-a8c29e6a7741",
+      "name": "PC Estudiante",
+      "webhookId": "c161f7ad-3e51-43ad-8439-c8f4cf474471"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Cuál es el problema?",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sin Internet"
+                  },
+                  {
+                    "option": "Internet lento"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Cantidad de equipos afectados",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "1 PC"
+                  },
+                  {
+                    "option": "2-5 PCs"
+                  },
+                  {
+                    "option": "Mas de 5 PCs"
+                  },
+                  {
+                    "option": "Todo el laboratorio"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Algo más que nos quieras comentar del problema?",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "options": {
+          "formTitle": "Problemas con la Red"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        784,
+        48
+      ],
+      "id": "0a204542-9fbd-4e2d-903a-e94409d56dcd",
+      "name": "Red",
+      "webhookId": "e09bbef1-4cfe-4696-8a92-bbc40cd5c660"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Cuál es el problema?",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "No enciende"
+                  },
+                  {
+                    "option": "Sin imagen"
+                  },
+                  {
+                    "option": "Imagen borrosa"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Algo más que nos quieras comentar del problema?",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "options": {
+          "formTitle": "Problemas con el Proyector"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        784,
+        -240
+      ],
+      "id": "524cb25f-66cb-4d39-9c9e-8e2d77bad714",
+      "name": "Proyector",
+      "webhookId": "c161f7ad-3e51-43ad-8439-c8f4cf474471"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Cuál es el problema?",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sin internet"
+                  },
+                  {
+                    "option": "Sin audio"
+                  },
+                  {
+                    "option": "No enciende"
+                  },
+                  {
+                    "option": "Pantalla negra"
+                  },
+                  {
+                    "option": "Muy lenta"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Algo más que nos quieras comentar del problema?",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "options": {
+          "formTitle": "Problemas con la PC del docente"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        784,
+        -432
+      ],
+      "id": "19dfd3df-7c78-40af-954f-6d1c63e582f3",
+      "name": "PC Docente",
+      "webhookId": "c161f7ad-3e51-43ad-8439-c8f4cf474471"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "746c2a5b-9f46-4409-9160-69881f229f8a",
+                    "leftValue": "={{ $json.Categoria }}",
+                    "rightValue": "PC Docente",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Docente"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "684e9065-24b4-4421-b2e6-fe2dcca53682",
+                    "leftValue": "={{ $json.Categoria }}",
+                    "rightValue": "Proyector",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Proyector"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.Categoria }}",
+                    "rightValue": "Red",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "bdacc693-10fa-4b07-866a-ccfac925556d"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Red"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "062e5af7-ea2d-44f2-bd6a-9eff8e382a2c",
+                    "leftValue": "={{ $json.Categoria }}",
+                    "rightValue": "PC Estudiante",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Estudiante"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "5d147b42-d54c-4aea-8e3f-2974f4d9cb23",
+                    "leftValue": "={{ $json.Categoria }}",
+                    "rightValue": "Software",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Software"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "4ef865b3-53cb-44cf-8c5f-b85e722fdc44",
+                    "leftValue": "={{ $json.Categoria }}",
+                    "rightValue": "Electricidad",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Electricidad"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        304,
+        -112
+      ],
+      "id": "85c89b78-0d5a-41f8-b3ac-c46bc2a99a8a",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Con qué está relacionada tu incidencia?",
+              "fieldType": "radio",
+              "fieldName": "Categoria",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "PC Docente"
+                  },
+                  {
+                    "option": "Red"
+                  },
+                  {
+                    "option": "Proyector"
+                  },
+                  {
+                    "option": "PC Estudiante"
+                  },
+                  {
+                    "option": "Software"
+                  },
+                  {
+                    "option": "Electricidad"
+                  }
+                ]
+              },
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "formTitle": "Problema a reportar",
+          "formDescription": "Ahora coméntanos más acerca del problema que estás enfrentando."
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        112,
+        -48
+      ],
+      "id": "46b226c5-68d6-47e7-b317-ff74571c89c2",
+      "name": "Categoria",
+      "webhookId": "fa2ce052-caf6-4aae-a80a-ad31f35f2589"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "54a66020-9fb7-4490-90cb-332eb1f15286",
+              "name": "Pabellon",
+              "value": "={{ $('On form submission').item.json.Pabellon }}",
+              "type": "string"
+            },
+            {
+              "id": "d401e0d0-9456-4235-bb91-a0c4863bdbcd",
+              "name": "Laboratorio",
+              "value": "={{ $('On form submission').item.json.Laboratorio }}",
+              "type": "string"
+            },
+            {
+              "id": "27bdcf3b-65db-4133-89a9-f0c4c00be2e1",
+              "name": "Categoria",
+              "value": "={{ $('Categoria').item.json.Categoria }}",
+              "type": "string"
+            },
+            {
+              "id": "d6f3a9e4-0fd1-4096-9b92-3c0c1a5fde8d",
+              "name": "Subcategoria",
+              "value": "={{ $json['Cuál es el problema?'] }}",
+              "type": "string"
+            },
+            {
+              "id": "70c355cb-2c65-4744-bf8c-f5c85a1522d0",
+              "name": "Afectados",
+              "value": "={{ ['PC Docente', 'Proyector'].includes($('Categoria').item.json.Categoria) ? 'No aplica' : $json['Cantidad de equipos afectados'] }}",
+              "type": "string"
+            },
+            {
+              "id": "a9fc5350-bfed-46f5-aa64-66504facf76a",
+              "name": "Comentario",
+              "value": "={{ $json[\"Algo más que nos quieras comentar del problema?\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1264,
+        -48
+      ],
+      "id": "4b9e7056-4035-4114-b541-103d95dab05d",
+      "name": "Recolector"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldType": "html",
+              "html": "<p>Si estás conforme con la información, dale a submit. Si no, intenta enviar un nuevo ticket desde cero.</p>\n<br>\n<table>\n  <tbody>\n    <tr>\n      <td>Pabellón:</td>\n      <td>&emsp;{{ $('Recolector').item.json.Pabellon }}</td>\n    </tr>\n    <tr>\n      <td>Laboratorio:</td>\n      <td>&emsp;{{ $('Recolector').item.json.Laboratorio }}</td>\n    </tr>\n    <tr>\n      <td>Categoría:</td>\n      <td>&emsp;{{ $('Recolector').item.json.Categoria }}</td>\n    </tr>\n    <tr>\n      <td>Subcategoría:</td>\n      <td>&emsp;{{ $('Recolector').item.json.Subcategoria }}</td>\n    </tr>\n    <tr>\n      <td>Afectados:</td>\n      <td>&emsp;{{ $('Recolector').item.json.Afectados }}</td>\n    </tr>\n  </tbody>\n</table>\n<br>"
+            }
+          ]
+        },
+        "options": {
+          "formTitle": "Resumen del Ticket"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        1520,
+        -48
+      ],
+      "id": "b3639c97-f702-437f-93d4-2f9c276b1b71",
+      "name": "Resumen",
+      "webhookId": "f2e15b42-9b4e-4b74-9642-2f94582e49c8"
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "https://api.internal-service.local/v1/sync",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
+        "url": "http://192.168.30.40:8000/clasificar-ticket",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={{ JSON.stringify($json) }}",
+        "jsonBody": "={\n  \"Pabellon\": \"{{ $('Recolector').item.json.Pabellon }}\",\n  \"Laboratorio\": {{ $('Recolector').item.json.Laboratorio }},\n  \"Categoria\": \"{{ $('Recolector').item.json.Categoria }}\",\n  \"Subcategoria\": \"{{ $('Recolector').item.json.Subcategoria }}\",\n  \"Afectados\": \"{{ $('Recolector').item.json.Afectados }}\",\n  \"Comentario\": \"{{ $('Recolector').item.json.Comentario }}\"\n}",
         "options": {}
       },
-      "id": "c5d4e3f2-3333-4890-c111-000000000003",
-      "name": "Enviar a Servicio Interno",
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
+      "typeVersion": 4.4,
       "position": [
-        680,
-        300
-      ]
+        2032,
+        -48
+      ],
+      "id": "c018605d-445c-4536-a989-f61af37807a3",
+      "name": "HTTP Request",
+      "retryOnFail": true,
+      "maxTries": 5
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "576ec2a4-c175-4b6c-91df-538465b78d11",
+              "leftValue": "={{ $json.criticidad_predicha }}",
+              "rightValue": "Alta",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        2304,
+        -48
+      ],
+      "id": "06a571e5-8586-4ec5-ac2b-17d0f20e1e40",
+      "name": "Condicion: Criticidad Alta?"
     }
   ],
   "pinData": {},
   "connections": {
-    "Recepcion de Eventos API": {
+    "On form submission": {
       "main": [
         [
           {
-            "node": "Normalizar Payload",
+            "node": "Categoria",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Normalizar Payload": {
+    "Electricidad": {
       "main": [
         [
           {
-            "node": "Enviar a Servicio Interno",
+            "node": "Recolector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Software": {
+      "main": [
+        [
+          {
+            "node": "Recolector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PC Estudiante": {
+      "main": [
+        [
+          {
+            "node": "Recolector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Red": {
+      "main": [
+        [
+          {
+            "node": "Recolector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Proyector": {
+      "main": [
+        [
+          {
+            "node": "Recolector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PC Docente": {
+      "main": [
+        [
+          {
+            "node": "Recolector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "PC Docente",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Proyector",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Red",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PC Estudiante",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Software",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Electricidad",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Categoria": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Despedida": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recolector": {
+      "main": [
+        [
+          {
+            "node": "Resumen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resumen": {
+      "main": [
+        [
+          {
+            "node": "Despedida",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Condicion: Criticidad Alta?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Condicion: Criticidad Alta?": {
+      "main": [
+        [
+          {
+            "node": "Send an Email",
             "type": "main",
             "index": 0
           }
@@ -83,22 +979,17 @@
       ]
     }
   },
-  "active": true,
+  "active": false,
   "settings": {
     "executionOrder": "v1",
-    "saveExecutionProgress": true,
-    "saveManualExecutions": true
+    "binaryMode": "separate",
+    "availableInMCP": false
   },
-  "versionId": "d9e8f7a6-4444-4111-a222-000000000001",
+  "versionId": "62b4fe89-f71d-4432-93b1-94d190de6c99",
   "meta": {
-    "templateCredsSetupCompleted": true
+    "templateCredsSetupCompleted": true,
+    "instanceId": "07a3b9f3a43d565fe63aec98e97014402610c7ee91981a2447db122f313b21eb"
   },
-  "tags": [
-    {
-      "createdAt": "2026-01-15T10:00:00.000Z",
-      "updatedAt": "2026-01-15T10:00:00.000Z",
-      "id": "prod-env",
-      "name": "Production"
-    }
-  ]
+  "id": "48FgDENw25XjfHFk",
+  "tags": []
 }
