@@ -1,0 +1,104 @@
+{
+  "name": "Workflow Tickets MLP",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook-api-v1",
+        "options": {}
+      },
+      "id": "e4f82a10-1111-4234-a800-000000000001",
+      "name": "Recepcion de Eventos API",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ],
+      "webhookId": "9a8b7c6d-5555-4321-8888-000000000001"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Normalización de payload de entrada\nconst inputData = $input.all();\nconst processedData = inputData.map(item => ({\n  id: item.json.body.id || null,\n  timestamp: new Date().toISOString(),\n  status: \"PROCESSED\",\n  payload: item.json.body\n}));\n\nreturn processedData;"
+      },
+      "id": "b3c2d1a0-2222-4567-b999-000000000002",
+      "name": "Normalizar Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.internal-service.local/v1/sync",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "c5d4e3f2-3333-4890-c111-000000000003",
+      "name": "Enviar a Servicio Interno",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        680,
+        300
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Recepcion de Eventos API": {
+      "main": [
+        [
+          {
+            "node": "Normalizar Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalizar Payload": {
+      "main": [
+        [
+          {
+            "node": "Enviar a Servicio Interno",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true
+  },
+  "versionId": "d9e8f7a6-4444-4111-a222-000000000001",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "tags": [
+    {
+      "createdAt": "2026-01-15T10:00:00.000Z",
+      "updatedAt": "2026-01-15T10:00:00.000Z",
+      "id": "prod-env",
+      "name": "Production"
+    }
+  ]
+}
